@@ -8,18 +8,19 @@ export default {
     extend: {
       colors: {
         navy: {
-          950: '#060B1E', // extremely dark base
-          900: '#0A1128', // very dark area
-          800: '#11224D', // panel dark area
-          700: '#1A2C5B', // lighter dark panel
-          600: '#203A70', // border blue
+          950: '#03050c', // Almost black base
+          900: '#070b1e', // Deep futuristic navy
+          800: '#0f162e', // Card background base
+          700: '#182245', // Lighter panel/hover state
+          600: '#23315d', // Border blue-navy
+          500: '#2f417a', // Text muted navy
         },
-        cyan: {
-          400: '#64D7E4', // light blue accent
-          500: '#00AEEF', // standard cyan/blue
-          600: '#008CC4', // dark cyan/blue hover
+        electric: {
+          DEFAULT: '#00A3FF', // Electric blue accent
+          hover: '#0085d1',
+          light: '#33B5FF',
+          dark: '#006299',
         },
-        lightBg: '#F0F4F8', // light background for services section
       },
       fontFamily: {
         sans: ['Outfit', 'Inter', 'system-ui', 'sans-serif'],
@@ -27,19 +28,30 @@ export default {
         display: ['"Playfair Display"', 'Georgia', 'serif'],
       },
       animation: {
-        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+        'pulse-slow': 'pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite',
         'float': 'float 6s ease-in-out infinite',
+        'float-slow': 'float 9s ease-in-out infinite',
         'glow': 'glow 3s ease-in-out infinite alternate',
+        'spin-slow': 'spin 20s linear infinite',
       },
       keyframes: {
         float: {
           '0%, 100%': { transform: 'translateY(0)' },
-          '50%': { transform: 'translateY(-10px)' },
+          '50%': { transform: 'translateY(-12px)' },
         },
         glow: {
-          '0%': { filter: 'drop-shadow(0 0 5px rgba(0, 174, 239, 0.4))' },
-          '100%': { filter: 'drop-shadow(0 0 20px rgba(100, 215, 228, 0.8))' },
+          '0%': { filter: 'drop-shadow(0 0 5px rgba(0, 163, 255, 0.4))' },
+          '100%': { filter: 'drop-shadow(0 0 20px rgba(0, 163, 255, 0.8))' },
         }
+      },
+      boxShadow: {
+        'neon': '0 0 15px rgba(0, 163, 255, 0.35)',
+        'neon-bright': '0 0 25px rgba(0, 163, 255, 0.6)',
+        'neon-inset': 'inset 0 0 15px rgba(0, 163, 255, 0.2)',
+        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+      },
+      backdropBlur: {
+        'xs': '2px',
       }
     },
   },
